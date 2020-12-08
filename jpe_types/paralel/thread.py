@@ -2,7 +2,6 @@
 import threading
 import logging
 
-
 class Thread(threading.Thread):
     """an extended version of the std python thread
 
@@ -11,9 +10,8 @@ class Thread(threading.Thread):
     but dont sublass the run method or the return data will be lost, instead  replace run with execute
 
     this threads adds
-    - thread inheritance so we can track how the thread was creted mostly for debugging
-    - thread returns the ability to return a tupple form a thread
-
+        - thread inheritance so we can track how the thread was creted mostly for debugging
+        - thread returns the ability to return a tupple form a thread
     """
     def __init__(self, group=None, target=None, name=None, args=(), kwargs=None, *, daemon=None):
         """This constructor should always be called with keyword arguments. Arguments are:
@@ -136,16 +134,50 @@ class LockableThread(Thread):
         self.lock = lock()
         "the lock used to lock the thread"
     
-    def aquire(self):
-        """lock Thread
+    def aquire(self, blocking=True, timeout=-1):
+        """Acquire a lock, blocking or non-blocking.
 
-        see threading doc for details on locking as the lock can vary"""
-        self.lock.acquire()
+        When invoked without arguments: if this thread already owns the lock,
+        increment the recursion level by one, and return immediately. Otherwise,
+        if another thread owns the lock, block until the lock is unlocked. Once
+        the lock is unlocked (not owned by any thread), then grab ownership, set
+        the recursion level to one, and return. If more than one thread is
+        blocked waiting until the lock is unlocked, only one at a time will be
+        able to grab ownership of the lock. There is no return value in this
+        case.
+
+        When invoked with the blocking argument set to true, do the same thing
+        as when called without arguments, and return true.
+
+        When invoked with the blocking argument set to false, do not block. If a
+        call without an argument would block, return false immediately;
+        otherwise, do the same thing as when called without arguments, and
+        return true.
+
+        When invoked with the floating-point timeout argument set to a positive
+        value, block for at most the number of seconds specified by timeout
+        and as long as the lock cannot be acquired.  Return true if the lock has
+        been acquired, false if the timeout has elapsed.
+
+        """
+        self.lock.acquire(blocking=blocking, timeout=timeout)
     
     def releace(self):
-        """releace Thread
+        """Release a lock, decrementing the recursion level.
 
-        see threading doc for details on locking as the lock can vary"""
+        If after the decrement it is zero, reset the lock to unlocked (not owned
+        by any thread), and if any other threads are blocked waiting for the
+        lock to become unlocked, allow exactly one of them to proceed. If after
+        the decrement the recursion level is still nonzero, the lock remains
+        locked and owned by the calling thread.
+
+        Only call this method when the calling thread owns the lock. A
+        RuntimeError is raised if this method is called when the lock is
+        unlocked.
+
+        There is no return value.
+
+        """
         self.lock.release()
         
 

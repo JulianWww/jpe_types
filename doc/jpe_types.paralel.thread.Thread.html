@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>jpe_types.paralel.thread.Thread : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            jpe_types API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code>jpe_types.paralel.thread.Thread(<span title="threading.Thread">threading.Thread</span>)</code> <small>class documentation</small></h1>
+
+        <span id="partOf">
+          Part of <code><a href="jpe_types.html" class="code" data-type="Package">jpe_types</a>.<a href="jpe_types.paralel.html" class="code" data-type="Package">paralel</a>.<a href="jpe_types.paralel.thread.html" class="code" data-type="Module">thread</a></code>
+          
+          <a href="classIndex.html#jpe_types.paralel.thread.Thread">(View In Hierarchy)</a>
+        </span>
+      </div>
+
+      <div class="extrasDocstring">
+        <p>Known subclasses: <a href="jpe_types.paralel.thread.LockableThread.html" class="code" data-type="Class">jpe_types.paralel.thread.LockableThread</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p>an extended version of the std python thread</p><p>see https://docs.python.org/3/library/threading.html for more information on threads</p><p>but dont sublass the run method or the return data will be lost, instead  replace run with execute</p><p>this threads adds</p><ul><li>thread inheritance so we can track how the thread was creted mostly for debugging</li><li>thread returns the ability to return a tupple form a thread</li></ul></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id6">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="jpe_types.paralel.thread.Thread.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>This constructor should always be called with keyword arguments. Arguments are:</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="jpe_types.paralel.thread.Thread.html#parent" class="code" data-type="Instance Variable">parent</a></td>
+    <td><span>witch tread initiated this thread</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="jpe_types.paralel.thread.Thread.html#run" class="code" data-type="Method">run</a></td>
+    <td><span>runs the thread and saves the result</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="jpe_types.paralel.thread.Thread.html#execute" class="code" data-type="Method">execute</a></td>
+    <td><span>Method representing the thread's activity.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="jpe_types.paralel.thread.Thread.html#join" class="code" data-type="Method">join</a></td>
+    <td><span>Wait until the thread terminates.</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="jpe_types.paralel.thread.Thread.html#_returnVal" class="code" data-type="Instance Variable">_returnVal</a></td>
+    <td><span>the result of the treads Function</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="jpe_types.paralel.thread.Thread.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, group=None, target=None, name=None, args=(), kwargs=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="jpe_types.paralel.thread.LockableThread.html" class="code" data-type="Class">jpe_types.paralel.thread.LockableThread</a></div>
+    
+    <div><p>This constructor should always be called with keyword arguments. Arguments are:</p><p>*group* should be None; reserved for future extension when a ThreadGroup class is implemented.</p><p>*target* is the callable object to be invoked by the run() method. Defaults to None, meaning nothing is called.</p><p>*name* is the thread name. By default, a unique name is constructed of the form "Thread-N" where N is a small decimal number.</p><p>*args* is the argument tuple for the target invocation. Defaults to ().</p><p>*kwargs* is a dictionary of keyword arguments for the target invocation. Defaults to {}.</p><p>If a subclass overrides the constructor, it must make sure to invoke the base class constructor (Thread.__init__()) before doing anything else to the thread.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="jpe_types.paralel.thread.Thread.parent">
+    
+  </a>
+  <a name="parent">
+    
+  </a>
+  <div class="functionHeader">
+    parent =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p>witch tread initiated this thread</p><p>the thread, that initiated this one, for inharitance. currently mostly for logging</p></div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="jpe_types.paralel.thread.Thread._returnVal">
+    
+  </a>
+  <a name="_returnVal">
+    
+  </a>
+  <div class="functionHeader">
+    _returnVal =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p>the result of the treads Function</p><p>used to store the return value of the function the thread ran unill join is called at witch point return val is returned</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="jpe_types.paralel.thread.Thread.run">
+    
+  </a>
+  <a name="run">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    run(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>runs the thread and saves the result</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="jpe_types.paralel.thread.Thread.execute">
+    
+  </a>
+  <a name="execute">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    execute(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Method representing the thread's activity.</p><p>You may override this method in a subclass. The standard run() method invokes the callable object passed to the object's constructor as the target argument, if any, with sequential and keyword arguments taken from the args and kwargs arguments, respectively.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="jpe_types.paralel.thread.Thread.join">
+    
+  </a>
+  <a name="join">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    join(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Wait until the thread terminates.</p><p>This blocks the calling thread until the thread whose join() method is called terminates -- either normally or through an unhandled exception or until the optional timeout occurs.</p><p>When the timeout argument is present and not None, it should be a floating point number specifying a timeout for the operation in seconds (or fractions thereof). As join() always returns None, you must call isAlive() after join() to decide whether a timeout happened -- if the thread is still alive, the join() call timed out.</p><p>When the timeout argument is not present or None, the operation will block until the thread terminates.</p><p>A thread can be join()ed many times.</p><p>join() raises a RuntimeError if an attempt is made to join the current thread as that would cause a deadlock. It is also an error to join() a thread before it has been started and attempts to do so raises the same exception.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for jpe_types, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> at 2020-12-08 10:23:50.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>
