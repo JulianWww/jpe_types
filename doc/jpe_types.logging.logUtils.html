@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>jpe_types.logging.logUtils : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            jpe_types API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code>jpe_types.logging.logUtils</code> <small>module documentation</small></h1>
+
+        <span id="partOf">
+          Part of <code><a href="jpe_types.html" class="code" data-type="Package">jpe_types</a>.<a href="jpe_types.logging.html" class="code" data-type="Package">logging</a></code>
+          
+          
+        </span>
+      </div>
+
+      <div class="extrasDocstring">
+        
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p>utils</p><p>logg utils function akka log builders and config handeling kida</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id8">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="jpe_types.logging.logUtils.html#logging_data" class="code" data-type="Variable">logging_data</a></td>
+    <td><span>config dict</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="jpe_types.logging.logUtils.html#handlerDict" class="code" data-type="Variable">handlerDict</a></td>
+    <td><span>handlr str to class dict</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="jpe_types.logging.logUtils.html#create_newRun" class="code" data-type="Function">create_newRun</a></td>
+    <td><span>create new run</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="jpe_types.logging.logUtils.html#runFile" class="code" data-type="Variable">runFile</a></td>
+    <td><span>the file to runn to</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="jpe_types.logging.logUtils.html#Create_defaultLogger" class="code" data-type="Function">Create_defaultLogger</a></td>
+    <td><span>create std logger</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="jpe_types.logging.logUtils.LogSetupError.html" class="code" data-type="Class">LogSetupError</a></td>
+    <td><span>Exception raised when logging wasnt setup befor calls</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="jpe_types.logging.logUtils.logging_data">
+    
+  </a>
+  <a name="logging_data">
+    
+  </a>
+  <div class="functionHeader">
+    logging_data =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p>config dict</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="jpe_types.logging.logUtils.handlerDict">
+    
+  </a>
+  <a name="handlerDict">
+    
+  </a>
+  <div class="functionHeader">
+    handlerDict =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p>handlr str to class dict</p></div> (type: <code>typing.Dict</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="jpe_types.logging.logUtils.create_newRun">
+    
+  </a>
+  <a name="create_newRun">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    create_newRun(name=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>create new run</p><p>don't use this function unless you want to mess stuff up</p><p>name generation in loggingConfig.json</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">id</td><td>the number of the run<p>%a Sun, Mon, ... %A Full weekday name. %w Weekday as a decimal number. %d Day of the month as a zero-padded decimal. %-d Day of the month as a decimal number. %b Abbreviated month name. %B Full month name. %m Month as a zero-padded decimal number. %-m Month as a decimal number. %y Year without century as a zero-padded decimal number. %-y Year without century as a decimal number. %Y Year with century as a decimal number. %H Hour (24-hour clock) as a zero-padded decimal number. %-H Hour (24-hour clock) as a decimal number. %I Hour (12-hour clock) as a zero-padded decimal number. %-I     Hour (12-hour clock) as a decimal number. %p Locale’s AM or PM. %M Minute as a zero-padded decimal number. %-M Minute as a decimal number. %S Second as a zero-padded decimal number. %-S Second as a decimal number. %f Microsecond as a decimal number, zero-padded on the left. %z UTC offset in the form +HHMM or -HHMM. %Z Time zone name. %j Day of the year as a zero-padded decimal number. %-j Day of the year as a decimal number. %U Week number of the year (Sunday as the first day of the week). All days in a new year preceding the first Sunday are considered to be in week 0. %W Week number of the year (Monday as the first day of the week). All days in a new year preceding the first Monday are considered to be in week 0. %c Locale’s appropriate date and time representation. %x Locale’s appropriate date representation. %X Locale’s appropriate time representation. %% A literal '%' character.</p><p>see https://www.programiz.com/python-programming/datetime/strftime for extra detailt ofn datetimeing</p></td></tr></table></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="jpe_types.logging.logUtils.runFile">
+    
+  </a>
+  <a name="runFile">
+    
+  </a>
+  <div class="functionHeader">
+    runFile =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p>the file to runn to</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="jpe_types.logging.logUtils.Create_defaultLogger">
+    
+  </a>
+  <a name="Create_defaultLogger">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    Create_defaultLogger(name=current_thread().name, logType="""stdLogger"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>create std logger</p><p>create std logger as specified by loggingConfig.json so edit that to change it</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">name</td><td>the name of the logger (type: str)</td></tr><tr><td></td><td class="fieldArg">logType</td><td>the type of a logger as set by loggingConfig (type: str)</td></tr></table></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for jpe_types, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> at 2020-12-14 12:22:08.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

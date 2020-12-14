@@ -1,6 +1,11 @@
 "better Threads and Thread logging"
 import threading
 import logging
+import typing
+from traceback import format_exc
+from jpe_types.logging.logUtils import Create_defaultLogger, logging_data, LogSetupError
+from jpe_types.logging.threadLogging import main_Logger, error_Logger, _setupLoggers
+
 
 class Thread(threading.Thread):
     """an extended version of the std python thread
@@ -179,7 +184,65 @@ class LockableThread(Thread):
 
         """
         self.lock.release()
+
+class LogThread(LockableThread):
+    """a thread wit its owne logger
+
+    a thread with a logger to log all acivity of the logger using decorators
+    """    
+    threadLogger = None
+    def __init__(self, *args, **kwargs):
+        """constructor
         
+            see LockableThread.__init__"""
+        LockableThread.__init__(self, *args, **kwargs)
+        global main_Logger, error_Logger
+        # if error_Logger is None: _setupLoggers()
+        if main_Logger is None:
+            from jpe_types.logging.threadLogging import main_Logger, error_Logger
+
+        self.threadLogger = Create_defaultLogger(name=self.name, logType="threadLogger")
+
+
+    def set_logger(self, log):
+        """sets the logger
+
+        set the logger of the thead used as an overide to std log used by the logging setup
+        """
+        self.threadLogger = log
+    
+    def run(self):
+        """runs the thread and saves the result
+
+        run the exec and logg the resut if error
+        """
+        try:
+            self._returnVal = self.execute()
+
+        except Exception as e:
+            # logg on additional loggers
+            for subLoggerStr in logging_data["threadLogger"]["additionalLoggers"]:
+                #log with and without traceback
+                if logging_data[logging_data["logTranslator"][subLoggerStr]]["trackBack"]:
+                    eval(subLoggerStr).error(format_exc())
+                else:
+                    eval(subLoggerStr).error(e)
+                #logg end msg
+                for msg in logging_data["threadLogger"]["errorLogMessage"]:
+                    eval(subLoggerStr).error(msg)
+            
+            if logging_data["threadLogger"]["logErrors"]:
+                if logging_data["threadLogger"]["trackBack"]:
+                    self.threadLogger.error(format_exc())
+                else:
+                    self.threadLogger.error(e)
+
+                for msg in logging_data["threadLogger"]["errorLogMessage"]:
+                    self.threadLogger.error(msg)
+            
+            raise e
+        
+        return self._returnVal
 
 class threadInharitanceFilter(logging.Filter):
     """logging filter for thread inheritance

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>jpe_types.paralel.thread.LogThread : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            jpe_types API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code>jpe_types.paralel.thread.LogThread(<a href="jpe_types.paralel.thread.LockableThread.html" class="code" data-type="Class">LockableThread</a>)</code> <small>class documentation</small></h1>
+
+        <span id="partOf">
+          Part of <code><a href="jpe_types.html" class="code" data-type="Package">jpe_types</a>.<a href="jpe_types.paralel.html" class="code" data-type="Package">paralel</a>.<a href="jpe_types.paralel.thread.html" class="code" data-type="Module">thread</a></code>
+          
+          <a href="classIndex.html#jpe_types.paralel.thread.LogThread">(View In Hierarchy)</a>
+        </span>
+      </div>
+
+      <div class="extrasDocstring">
+        
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p>a thread wit its owne logger</p><p>a thread with a logger to log all acivity of the logger using decorators</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id16">
+  
+  <tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="jpe_types.paralel.thread.LogThread.html#threadLogger" class="code" data-type="Instance Variable">threadLogger</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="jpe_types.paralel.thread.LogThread.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>constructor</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="jpe_types.paralel.thread.LogThread.html#set_logger" class="code" data-type="Method">set_logger</a></td>
+    <td><span>sets the logger</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="jpe_types.paralel.thread.LogThread.html#run" class="code" data-type="Method">run</a></td>
+    <td><span>runs the thread and saves the result</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="jpe_types.paralel.thread.LogThread.html#_returnVal" class="code" data-type="Instance Variable">_returnVal</a></td>
+    <td><span>the result of the treads Function</span></td>
+  </tr>
+</table>
+        
+          <p class="inheritedFrom">
+            Inherited from <a href="jpe_types.paralel.thread.LockableThread.html" class="code" data-type="Class">LockableThread</a>:
+          </p>
+          <table class="children sortable" id="id17">
+  
+  <tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="jpe_types.paralel.thread.LockableThread.html#lock" class="code" data-type="Instance Variable">lock</a></td>
+    <td><span>the lock used to lock the thread</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="jpe_types.paralel.thread.LockableThread.html#aquire" class="code" data-type="Method">aquire</a></td>
+    <td><span>Acquire a lock, blocking or non-blocking.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="jpe_types.paralel.thread.LockableThread.html#releace" class="code" data-type="Method">releace</a></td>
+    <td><span>Release a lock, decrementing the recursion level.</span></td>
+  </tr>
+</table>
+          
+          <p class="inheritedFrom">
+            Inherited from <a href="jpe_types.paralel.thread.Thread.html" class="code" data-type="Class">Thread</a> (via <a href="jpe_types.paralel.thread.LockableThread.html" class="code" data-type="Class">LockableThread</a>):
+          </p>
+          <table class="children sortable" id="id18">
+  
+  <tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="jpe_types.paralel.thread.Thread.html#parent" class="code" data-type="Instance Variable">parent</a></td>
+    <td><span>witch tread initiated this thread</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="jpe_types.paralel.thread.Thread.html#execute" class="code" data-type="Method">execute</a></td>
+    <td><span>Method representing the thread's activity.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="jpe_types.paralel.thread.Thread.html#join" class="code" data-type="Method">join</a></td>
+    <td><span>Wait until the thread terminates.</span></td>
+  </tr>
+</table>
+          
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseinstancevariable">
+  
+  <a name="jpe_types.paralel.thread.LogThread.threadLogger">
+    
+  </a>
+  <a name="threadLogger">
+    
+  </a>
+  <div class="functionHeader">
+    threadLogger =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="jpe_types.paralel.thread.LogThread.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, *args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="jpe_types.paralel.thread.LockableThread.html#__init__" class="code" data-type="Method">jpe_types.paralel.thread.LockableThread.__init__</a></div>
+    
+    <div><p>constructor</p><p>see LockableThread.__init__</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="jpe_types.paralel.thread.LogThread.set_logger">
+    
+  </a>
+  <a name="set_logger">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_logger(self, log):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>sets the logger</p><p>set the logger of the thead used as an overide to std log used by the logging setup</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="jpe_types.paralel.thread.LogThread.run">
+    
+  </a>
+  <a name="run">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    run(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="jpe_types.paralel.thread.Thread.html#run" class="code" data-type="Method">jpe_types.paralel.thread.Thread.run</a></div>
+    
+    <div><p>runs the thread and saves the result</p><p>run the exec and logg the resut if error</p></div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="jpe_types.paralel.thread.LogThread._returnVal">
+    
+  </a>
+  <a name="_returnVal">
+    
+  </a>
+  <div class="functionHeader">
+    _returnVal =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overrides <a href="jpe_types.paralel.thread.Thread.html#_returnVal" class="code" data-type="Instance Variable">jpe_types.paralel.thread.Thread._returnVal</a></div>
+    <div><p>the result of the treads Function</p><p>used to store the return value of the function the thread ran unill join is called at witch point return val is returned</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for jpe_types, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> at 2020-12-14 12:22:08.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>
