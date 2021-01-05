@@ -3,7 +3,7 @@
           "DTD/xhtml1-strict.dtd">
 <html>
   <head>
-    <title>jpe_types.paralel : API documentation</title>
+    <title>jpe_types.utils.__init__ : API documentation</title>
 
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
@@ -28,10 +28,10 @@
     <div class="container">
 
       <div class="page-header">
-        <h1 class="package"><code>jpe_types.paralel</code> <small>package documentation</small></h1>
+        <h1 class="module"><code>jpe_types.utils.__init__</code> <small>module documentation</small></h1>
 
         <span id="partOf">
-          Part of <code><a href="jpe_types.html" class="code" data-type="Package">jpe_types</a></code>
+          Part of <code><a href="jpe_types.html" class="code" data-type="Package">jpe_types</a>.<a href="jpe_types.utils.html" class="code" data-type="Package">utils</a></code>
           
           
         </span>
@@ -42,22 +42,17 @@
       </div>
 
       <div class="moduleDocstring">
-        <div><p>additons to paralel computation</p><p>additional and slitly imporved thread Pricesses with retuns</p></div>
+        <div><p>utils module</p></div>
       </div>
 
       <div id="splitTables">
-        <table class="children sortable" id="id21">
+        <table class="children sortable" id="id38">
   
-  <tr class="module">
+  <tr class="function">
     
-    <td>Module</td>
-    <td><a href="jpe_types.paralel.multiprocessing.html" class="code" data-type="Module">multiprocessing</a></td>
-    <td><span>multiprocessing enchanments</span></td>
-  </tr><tr class="module">
-    
-    <td>Module</td>
-    <td><a href="jpe_types.paralel.thread.html" class="code" data-type="Module">thread</a></td>
-    <td><span>better Threads and Thread logging</span></td>
+    <td>Function</td>
+    <td><a href="jpe_types.utils.html#fallback" class="code" data-type="Function">fallback</a></td>
+    <td><span>decorator for fallback functions</span></td>
   </tr>
 </table>
         
@@ -67,7 +62,26 @@
 
       <div id="childList">
 
-        
+        <div class="basefunction">
+  
+  <a name="jpe_types.utils.fallback">
+    
+  </a>
+  <a name="fallback">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    fallback(last, *fallbacks):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>decorator for fallback functions</p><p>if the current function retuns an error last will be executed anything after that will be used as a fallback for the one before if the last one retuns an error the last error is returned</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">last</td><td>pyobject with __call__ method</td></tr></table></div>
+  </div>
+</div>
 
       </div>
       <address>

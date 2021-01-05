@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>jpe_types.logging.stepLogging : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            jpe_types API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code>jpe_types.logging.stepLogging</code> <small>module documentation</small></h1>
+
+        <span id="partOf">
+          Part of <code><a href="jpe_types.html" class="code" data-type="Package">jpe_types</a>.<a href="jpe_types.logging.html" class="code" data-type="Package">logging</a></code>
+          
+          
+        </span>
+      </div>
+
+      <div class="extrasDocstring">
+        
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p>compleatly logg function execution</p><p>log function execution line by line its threadsafe btw</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id16">
+  
+  <tr class="function">
+    
+    <td>Function</td>
+    <td><a href="jpe_types.logging.stepLogging.html#encriptName" class="code" data-type="Function">encriptName</a></td>
+    <td><span>encript frame id to save</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="jpe_types.logging.stepLogging.SetTrace.html" class="code" data-type="Class">SetTrace</a></td>
+    <td><span>internal with SetTrace(monitor):</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="jpe_types.logging.stepLogging.FuncFrames.html" class="code" data-type="Class">FuncFrames</a></td>
+    <td><span>the current Frame</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="jpe_types.logging.stepLogging.html#funcFramesType" class="code" data-type="Variable">funcFramesType</a></td>
+    <td><span>typing type of FuncFrames</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="jpe_types.logging.stepLogging.html#execLog" class="code" data-type="Function">execLog</a></td>
+    <td><span>logging function used ty log decorator</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="jpe_types.logging.stepLogging.html#loggers" class="code" data-type="Variable">loggers</a></td>
+    <td><span>dict of loggers</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="jpe_types.logging.stepLogging.html#logFile" class="code" data-type="Variable">logFile</a></td>
+    <td><span>dict of files by THread</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="jpe_types.logging.stepLogging.html#log" class="code" data-type="Function">log</a></td>
+    <td><span>logging decorator</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="jpe_types.logging.stepLogging.replay.html" class="code" data-type="Class">replay</a></td>
+    <td><span>replay a log file</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction">
+  
+  <a name="jpe_types.logging.stepLogging.encriptName">
+    
+  </a>
+  <a name="encriptName">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    encriptName(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>encript frame id to save</p><p>it converts a value int to base 36</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="jpe_types.logging.stepLogging.funcFramesType">
+    
+  </a>
+  <a name="funcFramesType">
+    
+  </a>
+  <div class="functionHeader">
+    funcFramesType =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p>typing type of FuncFrames</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="jpe_types.logging.stepLogging.execLog">
+    
+  </a>
+  <a name="execLog">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    execLog(Trace):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>logging function used ty log decorator</p><p>purly internal</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="jpe_types.logging.stepLogging.loggers">
+    
+  </a>
+  <a name="loggers">
+    
+  </a>
+  <div class="functionHeader">
+    loggers =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p>dict of loggers</p><p>a dict conaining loggers by save file and thread it contains SetTrace's</p><table class="fieldTable"></table></div> (type: <code>typing.Dict[str, typing.Dict[Thread, SetTrace]]</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="jpe_types.logging.stepLogging.logFile">
+    
+  </a>
+  <a name="logFile">
+    
+  </a>
+  <div class="functionHeader">
+    logFile =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p>dict of files by THread</p><p>the files in witch the log is saved by Thread</p><table class="fieldTable"></table></div> (type: <code>typing.Dict[Thread, str]</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="jpe_types.logging.stepLogging.log">
+    
+  </a>
+  <a name="log">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    log(directory="""./frameLog"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>logging decorator</p><p>log the functions this relates to</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">directory</td><td>the directory to save to (type: str)</td></tr></table></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for jpe_types, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> at 2021-01-05 18:51:15.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

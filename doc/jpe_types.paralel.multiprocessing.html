@@ -3,7 +3,7 @@
           "DTD/xhtml1-strict.dtd">
 <html>
   <head>
-    <title>jpe_types.paralel.thread : API documentation</title>
+    <title>jpe_types.paralel.multiprocessing : API documentation</title>
 
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
@@ -28,7 +28,7 @@
     <div class="container">
 
       <div class="page-header">
-        <h1 class="module"><code>jpe_types.paralel.thread</code> <small>module documentation</small></h1>
+        <h1 class="module"><code>jpe_types.paralel.multiprocessing</code> <small>module documentation</small></h1>
 
         <span id="partOf">
           Part of <code><a href="jpe_types.html" class="code" data-type="Package">jpe_types</a>.<a href="jpe_types.paralel.html" class="code" data-type="Package">paralel</a></code>
@@ -42,32 +42,37 @@
       </div>
 
       <div class="moduleDocstring">
-        <div><p>better Threads and Thread logging</p></div>
+        <div><p>multiprocessing enchanments</p><p>adds Processes that return values as well as Process safe printing</p></div>
       </div>
 
       <div id="splitTables">
-        <table class="children sortable" id="id27">
+        <table class="children sortable" id="id22">
   
   <tr class="class">
     
     <td>Class</td>
-    <td><a href="jpe_types.paralel.thread.Thread.html" class="code" data-type="Class">Thread</a></td>
-    <td><span>an extended version of the std python thread</span></td>
+    <td><a href="jpe_types.paralel.multiprocessing.printer.html" class="code" data-type="Class">printer</a></td>
+    <td><span>printStatment class that can be used in all processes</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="jpe_types.paralel.multiprocessing.html#Print" class="code" data-type="Variable">Print</a></td>
+    <td><span>print function</span></td>
   </tr><tr class="class">
     
     <td>Class</td>
-    <td><a href="jpe_types.paralel.thread.LockableThread.html" class="code" data-type="Class">LockableThread</a></td>
-    <td><span>a combination of a lock and a thread</span></td>
+    <td><a href="jpe_types.paralel.multiprocessing.context.html" class="code" data-type="Class">context</a></td>
+    <td><span>just a placeholder</span></td>
   </tr><tr class="class">
     
     <td>Class</td>
-    <td><a href="jpe_types.paralel.thread.LogThread.html" class="code" data-type="Class">LogThread</a></td>
-    <td><span>a thread wit its owne logger</span></td>
+    <td><a href="jpe_types.paralel.multiprocessing.Process.html" class="code" data-type="Class">Process</a></td>
+    <td><span>Process objects represent activity that is run in a separate process. The Process class has equivalents of all the methods of threading.Thread.</span></td>
   </tr><tr class="class">
     
     <td>Class</td>
-    <td><a href="jpe_types.paralel.thread.threadInharitanceFilter.html" class="code" data-type="Class">threadInharitanceFilter</a></td>
-    <td><span>logging filter for thread inheritance</span></td>
+    <td><a href="jpe_types.paralel.multiprocessing.classScharer.html" class="code" data-type="Class">classScharer</a></td>
+    <td><span>namespace to share a class</span></td>
   </tr>
 </table>
         
@@ -77,7 +82,23 @@
 
       <div id="childList">
 
-        
+        <div class="basevariable">
+  
+  <a name="jpe_types.paralel.multiprocessing.Print">
+    
+  </a>
+  <a name="Print">
+    
+  </a>
+  <div class="functionHeader">
+    Print =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p>print function</p><p>the function to print in withc will add everything to a queue witch is then read by a thread of the printer</p></div>
+  </div>
+</div>
 
       </div>
       <address>
