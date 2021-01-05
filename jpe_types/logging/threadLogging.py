@@ -67,13 +67,13 @@ def log(log=None, logName=f"{__name__} log", useStdLog=True, loggErrors=True):
                         for msg in logUtils.logging_data[logUtils.logging_data["logTranslator"][subLoggerStr]]["errorLogMessage"]:
                             eval(subLoggerStr).error(msg)
                 raise e
-            funLogger.info(endExecLog(val))
+            funLogger.debug(endExecLog(val))
             return val
             
                     
         def thread_log_wraper(args, kwargs):
             logg = current_thread().threadLogger
-            logg.info(getMsg(args, kwargs))
+            logg.debug(getMsg(args, kwargs))
 
             return call(args, kwargs, logg)
         
@@ -81,12 +81,12 @@ def log(log=None, logName=f"{__name__} log", useStdLog=True, loggErrors=True):
             if main_Logger is None:
                 raise logUtils.LogSetupError
             
-            main_Logger.info(getMsg(args, kwargs))
+            main_Logger.debug(getMsg(args, kwargs))
             return call(args, kwargs, main_Logger)
         
 
         def log_wraper(args, kwargs):
-            log.info(getMsg(args, kwargs))
+            log.debug(getMsg(args, kwargs))
             return call(args, kwargs, log)
         
         def wraper(*args, **kwargs):
